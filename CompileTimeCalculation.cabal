@@ -1,0 +1,21 @@
+name:                CompileTimeCalculation
+version:             0.1.0.0
+synopsis:            This program demonstrates the use of TemplateHaskell in order
+                     to do compile-time calculation.
+license-file:        LICENSE
+author:              Frédéric BISSON
+maintainer:          zigazou@free.fr
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable CompileTimeCalculation
+  main-is:             Main.hs
+  build-depends:       base >=4.8 && <4.9, template-haskell
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+                       -fllvm
+                       -fwarn-incomplete-patterns
+                       -fwarn-incomplete-uni-patterns
+                       -fno-warn-unused-do-bind
+                       -O2
